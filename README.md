@@ -14,9 +14,8 @@ var cache = require('assoc-cache');
 
 // usage
 cache.set('foo', 'bar');
-var value = cache.get('foo');
+cache.get('foo', function(value){console.log(value)});
 
-console.log(value);
 ```
 
 Which should print
@@ -29,5 +28,5 @@ bar
 ### ```set``` function(key, value)
 - stores a value
 
-### ```get``` function(key)
-- Retrieves a value or `undefined`
+### ```get``` function(key, callback)
+- callback value or `undefined`
