@@ -20,13 +20,13 @@ module.exports = {
         if (memory[key] == undefined) {
             if (itemNb >= maxNb) {
                 delete memory[index[lastItem]];
-                lastItem = (lastItem + 1).mod(maxNb);
+                lastItem = (lastItem + 1) % maxNb;
             } else {
                 itemNb++;
             }
         };
         memory[key] = value;
-        index[(lastItem - 1).mod(itemNb)] = key;
+        index[(lastItem - 1 + maxNb) % itemNb ] = key;
     },
 
     /**
