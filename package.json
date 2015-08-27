@@ -1,6 +1,6 @@
 {
   "name": "assoc-cache",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple local memory cache via an associative array support .set() .get()",
   "main": "index.js",
   "scripts": {
